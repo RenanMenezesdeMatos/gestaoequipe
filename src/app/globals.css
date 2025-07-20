@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-purple-primary: #660099;
+  --color-purple-secondary: #461E5F;
+  --color-pink-primary: #EB367D;
+  --color-pink-secondary: #CD1E5A;
+  --color-green-primary: #99CC33;
+  --color-green-secondary: #32A04B;
+  --color-orange-primary: #FF9900;
+  --color-orange-secondary: #FA6423;
+  --color-text-primary: #1f2937;
+  --color-text-secondary: #616161;
+  --color-background: #f5f5f5;
+}
+
+body {
+  font-family: "Roboto Slab", serif;
+  font-size: 16px;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+}
