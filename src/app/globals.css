@@ -5,6 +5,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 :root {
   --color-purple-primary: #660099;
   --color-purple-secondary: #461E5F;

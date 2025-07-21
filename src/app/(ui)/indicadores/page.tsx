@@ -1,5 +1,5 @@
 export default function Page() {
 	return (
-		<div>Conteudo da página - Indicadores</div>
+		<div className="w-full">Conteudo da página - Indicadores</div>
 	)
 }

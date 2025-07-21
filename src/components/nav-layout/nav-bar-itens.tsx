@@ -31,7 +31,7 @@ export const NavBarItens = () => {
 
 					</div>
 
-					<div className=" lg:flex-grow border-t border-gray-200 mb-2" />
+					<div className=" lg:flex-grow border-t border-gray-200 mb-2 " />
 
 					<NavItem
 						label="Home"

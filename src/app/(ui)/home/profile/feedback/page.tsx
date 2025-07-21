@@ -1,4 +1,5 @@
-import { FeedbackContent } from "@/components/home-layout/container-profile/profile-area/feedback-content";
+import { FeedbackContent } from "@/components/home/container-profile/profile-area/feedback-content";
+
 
 type Props = {
 	children: React.ReactNode;

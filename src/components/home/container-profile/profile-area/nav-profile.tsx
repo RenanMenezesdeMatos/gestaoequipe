@@ -5,7 +5,7 @@ export const NavProfile = () => {
 	return (
 		<>
 
-			<div className="flex flex-row justify-center items-center gap-8 relative mt-5 mb-5 " >
+			<div className="w-full flex flex-row justify-center items-center gap-8 relative mt-5 mb-5" >
 
 				<LinkProfile
 					href="/home/profile"

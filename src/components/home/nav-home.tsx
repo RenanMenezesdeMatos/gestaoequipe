@@ -2,14 +2,15 @@ import { ChartPieIcon, FireIcon, HomeIcon, NewspaperIcon, TrophyIcon } from "@he
 import { ButtonHomeMenu } from "../ui/buttom-home-menu";
 
 export const NavHome = () => {
+
 	return (
 		<div className="flex flex-1 justify-center items-center gap-1 h-full w-full">
 
 			<ButtonHomeMenu
-				href="/home"
+				href={"/home/profile"}
 				icon={<HomeIcon />}
 				label="Home"
-				active={false}
+				active={true}
 			/>
 
 			<ButtonHomeMenu
