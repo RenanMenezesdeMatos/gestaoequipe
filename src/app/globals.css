@@ -27,3 +27,7 @@ body {
   background-color: var(--color-background);
   color: var(--color-text-primary);
 }
+
+.carousel ::-webkit-scrollbar {
+  display: none;
+}

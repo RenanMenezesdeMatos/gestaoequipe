@@ -31,7 +31,7 @@ export const NavItem = ({ label, icon, href, active, showIcon }: Props) => {
 				+ (isMe ? ' text-purple-primary font-bold' : '')
 			}>
 
-			<div className="size-5 flex items-center justify-center">
+			<div className="h-5 w-5 flex items-center justify-center">
 				{icon}
 			</div>
 

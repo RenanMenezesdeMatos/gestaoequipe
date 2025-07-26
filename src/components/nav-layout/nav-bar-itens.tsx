@@ -23,7 +23,7 @@ export const NavBarItens = () => {
 				<div className="flex flex-col justify-end mt-6 p-3">
 					<div className=" flex flex-row items-center justify-center overflow-hidden">
 
-						<div className="block truncate object-cover">
+						<div className={`block truncate object-cover transition-all duration-200 ease-in-out ${collapsed ? 'opacity-0 scale-0' : 'opacity-100 scale-100'}`}>
 							<NavMyProfile />
 						</div>
 

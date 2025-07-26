@@ -9,12 +9,12 @@ export const HeaderLayout = () => {
 
 			<div className="flex flex-row gap-6">
 				<div className="flex gap-2 justify-center items-center">
-					<CalendarDateRangeIcon className="size-5" />
+					<CalendarDateRangeIcon className="h-5" />
 					Dados do mês 07/2025
 				</div>
 
 				<div className="flex gap-2 justify-center items-center">
-					<ArrowPathIcon className="size-5" />
+					<ArrowPathIcon className="h-5" />
 					Ultima atualização em 15/07/2025
 				</div>
 
@@ -33,7 +33,7 @@ export const HeaderLayout = () => {
 				/>
 
 				<ChevronDoubleDownIcon
-					className="size-4 cursor-pointer hover:opacity-40"
+					className="h-4 cursor-pointer hover:opacity-40"
 				/>
 
 			</div>
