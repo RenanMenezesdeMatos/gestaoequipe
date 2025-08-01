@@ -2,9 +2,9 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { Input } from "@/components/ui/Input";
+import { InputCustom } from "@/components/ui/custom/input-custom";
 import { EnvelopeIcon, LockClosedIcon } from "@heroicons/react/24/outline";
-import { Button } from "../ui/button";
+import { ButtonCustom } from "../ui/custom/button-custom";
 
 export const SigninForm = () => {
 	const router = useRouter();
@@ -17,24 +17,24 @@ export const SigninForm = () => {
 
 	return (
 		<>
-			<Input
+			<InputCustom
 				placeholder="Digite seu e-mail"
 				value={emailField}
 				onChange={(t) => setEmailField(t)}
 				filled
-				icon={<EnvelopeIcon className="h-6 w-6 text-white" />}
+				icon={<EnvelopeIcon className="h-6 w-6 text-card" />}
 			/>
 
-			<Input
+			<InputCustom
 				placeholder="Digite sua senha"
 				value={passwordField}
 				onChange={(t) => setPasswordField(t)}
 				password
 				filled
-				icon={<LockClosedIcon className="h-6 w-6 text-white" />}
+				icon={<LockClosedIcon className="h-6 w-6 text-card" />}
 			/>
 
-			<Button
+			<ButtonCustom
 				label="Entrar"
 				onClick={handleEnterButtonClick}
 				size={1}

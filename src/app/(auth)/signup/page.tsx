@@ -1,8 +1,8 @@
 'use client';
 
 import { SignupForm } from "@/components/auth/signup-form";
-import { Logo } from "@/components/ui/Logo";
-import { Button } from "@/components/ui/button";
+import { ButtonCustom } from "@/components/ui/custom/button-custom";
+import { Logo } from "@/components/ui/custom/Logo";
 import { useRouter } from 'next/navigation';
 
 export default function Page() {
@@ -26,15 +26,15 @@ export default function Page() {
 
 			<div className="flex items-center justify-center gap-6 mb-10">
 
-				<div className="flex-grow border-t border-gray-400" />
+				<div className="flex-grow border-t border-muted-foreground" />
 
-				<span className="text-gray-500" > OU </span>
+				<span className="text-muted-foreground" > OU </span>
 
-				<div className="flex-grow border-t border-gray-400" />
+				<div className="flex-grow border-t border-muted-foreground" />
 
 			</div>
 
-			<Button
+			<ButtonCustom
 				label="Já tenho uma conta"
 				size={2}
 				type={1}

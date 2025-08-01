@@ -5,4 +5,6 @@ export type Goal = {
 	targetGoal: number;
 	untilTheGoal: number;
 	userGoal: number;
+	typeGoal: boolean;
+	dataType: "percent" | "number" | "minute"
 }

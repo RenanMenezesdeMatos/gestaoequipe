@@ -1,4 +1,4 @@
-import { FeedbackContent } from "@/components/home/container-profile/profile-area/feedback-content";
+import { FeedbackContent } from "@/components/home/profile/container-profile-area/profile-area/feedback-content";
 
 
 type Props = {
@@ -8,7 +8,7 @@ type Props = {
 export default function Page({ children }: Props) {
 	return (
 		<div className="h-full w-full px-12">
-			<h1 className="font-robotoSlab text-3xl text-purple-primary mb-8">Histórico de Feedbacks</h1>
+			<h1 className="font-robotoSlab text-3xl text-purpleprimary mb-8 text-foreground">Histórico de Feedbacks</h1>
 
 			<FeedbackContent />
 

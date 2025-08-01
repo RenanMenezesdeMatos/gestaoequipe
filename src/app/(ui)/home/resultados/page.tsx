@@ -1,4 +1,4 @@
-import { ContainerResultado } from "@/components/home/container-profile/resultado-area/container-resultado";
+import { ContainerResultado } from "@/components/home/profile/container-profile-area/resultado-area/container-resultado";
 
 export default function Page() {
 	return (

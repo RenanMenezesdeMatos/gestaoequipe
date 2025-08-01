@@ -1,4 +1,4 @@
-import { Logo } from "@/components/ui/Logo";
+import { Logo } from "@/components/ui/custom/Logo";
 import { redirect } from "next/navigation";
 
 export default function Page() {

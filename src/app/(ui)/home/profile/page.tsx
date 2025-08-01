@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { ProfilePhoto } from "@/components/ui/profile-photo";
+import { ButtonCustom } from "@/components/ui/custom/button-custom";
+import { ProfilePhoto } from "@/components/ui/custom/profile-photo";
 import { users } from "@/data/user";
 
 export default function Page() {
@@ -50,14 +50,14 @@ export default function Page() {
 				<div className="flex flex-col gap-2">
 
 					<div>
-						<Button
+						<ButtonCustom
 							label="Editar Perfil"
 							size={3}
 							type={2}
 						/>
 					</div>
 					<div>
-						<Button
+						<ButtonCustom
 							label="Trocar Foto"
 							size={3}
 							type={2}

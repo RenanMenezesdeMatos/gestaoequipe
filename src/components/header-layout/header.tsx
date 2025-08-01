@@ -1,6 +1,7 @@
 import { users } from "@/data/user"
 import { ArrowPathIcon, CalendarDateRangeIcon, ChevronDoubleDownIcon } from "@heroicons/react/20/solid"
-import { ProfilePhoto } from "../ui/profile-photo"
+import { ProfilePhoto } from "../ui/custom/profile-photo"
+import { ThemeTogle } from "./theme-toggle"
 
 export const HeaderLayout = () => {
 
@@ -35,6 +36,10 @@ export const HeaderLayout = () => {
 				<ChevronDoubleDownIcon
 					className="h-4 cursor-pointer hover:opacity-40"
 				/>
+
+				<div className="pl-4 text-foreground bg-purpleprimarybackground">
+					<ThemeTogle />
+				</div>
 
 			</div>
 		</div>
