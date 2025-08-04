@@ -1,11 +1,14 @@
-import { ContainerResultado } from "@/components/home/profile/container-profile-area/resultado-area/container-resultado";
+import { ContainerCarouselCard } from "@/components/home/profile/container-profile-area/resultado-area/carousel-card/container-carousel-card";
+import { ChartContentCard } from "@/components/home/profile/container-profile-area/resultado-area/charts/chart-content-card";
 
 export default function Page() {
 	return (
-		<div className="flex justify-center h-full w-full">
+		<div className="flex flex-col justify-center items-center h-full w-full">
+			<ContainerCarouselCard />
 
-			<ContainerResultado />
-
+			<div className="flex flex-1 bg-background h-full w-[97%] mb-2">
+				<ChartContentCard />
+			</div>
 		</div>
 	)
 }

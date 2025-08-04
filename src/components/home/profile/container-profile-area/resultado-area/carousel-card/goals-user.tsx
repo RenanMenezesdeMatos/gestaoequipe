@@ -22,7 +22,7 @@ export const GoalsUser = ({
 		(typeGoal === true && userGoal < targetGoal) ||
 		(typeGoal === false && userGoal > targetGoal);
 
-	// 🔤 Pluralizador
+	// Pluralizador
 	const pluralize = (value: number, singular: string, plural?: string) =>
 		value === 1 ? singular : (plural ?? singular + "s");
 
@@ -53,8 +53,8 @@ export const GoalsUser = ({
 
 	return (
 		<div>
-			<div className={` bg-accent/50
-			${shouldWarn ? "border-destructive" : "border-gray-200"}
+			<div className={`bg-accent/40 
+			${shouldWarn ? "border-destructive bg-destructive/10" : "border"}
 				 border-[1px] flex flex-col justify-center items-start rounded-md p-2 w-64 h-32
 				
 			`}>
