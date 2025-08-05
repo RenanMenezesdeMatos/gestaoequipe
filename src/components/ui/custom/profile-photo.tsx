@@ -1,5 +1,3 @@
-import { User } from "@/types/user";
-
 type Props = {
 	src: string | undefined,
 	alt: string,

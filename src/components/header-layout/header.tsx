@@ -1,7 +1,8 @@
 import { users } from "@/data/user"
-import { ArrowPathIcon, CalendarDateRangeIcon, ChevronDoubleDownIcon } from "@heroicons/react/20/solid"
-import { ProfilePhoto } from "../ui/custom/profile-photo"
 import { ThemeTogle } from "./theme-toggle"
+import { ProfileTrigger } from "./profile-area/profile-trigger"
+import { Calendar1, Earth, EarthIcon, EarthLock, Heart, LucideEarth, RefreshCcwIcon } from "lucide-react"
+import { NotificationTrigger } from "./notification-area/notifications-trigger"
 
 export const HeaderLayout = () => {
 
@@ -10,12 +11,12 @@ export const HeaderLayout = () => {
 
 			<div className="flex flex-row gap-6">
 				<div className="flex gap-2 justify-center items-center">
-					<CalendarDateRangeIcon className="h-5" />
+					<Calendar1 className="h-5" />
 					Dados do mês 07/2025
 				</div>
 
 				<div className="flex gap-2 justify-center items-center">
-					<ArrowPathIcon className="h-5" />
+					<RefreshCcwIcon className="h-5" />
 					Ultima atualização em 15/07/2025
 				</div>
 
@@ -23,7 +24,7 @@ export const HeaderLayout = () => {
 
 			<div className="flex flex-row justify-center items-center">
 
-				<div className="flex gap-2 pr-2">
+				{/* <div className="flex gap-2 pr-2">
 					Olá <strong>{users[1].name}</strong>
 				</div>
 
@@ -35,7 +36,11 @@ export const HeaderLayout = () => {
 
 				<ChevronDoubleDownIcon
 					className="h-4 cursor-pointer hover:opacity-40"
-				/>
+				/> */}
+
+				<ProfileTrigger />
+
+				<NotificationTrigger />
 
 				<div className="pl-4 text-foreground bg-purpleprimarybackground">
 					<ThemeTogle />

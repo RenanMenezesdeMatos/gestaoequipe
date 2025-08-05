@@ -1,4 +1,4 @@
-import { WrenchScrewdriverIcon } from "@heroicons/react/24/solid";
+import { WrenchIcon } from "lucide-react";
 
 type Props = {
 	children: React.ReactNode;
@@ -7,7 +7,7 @@ type Props = {
 export default function Page({ children }: Props) {
 	return (
 		<div className="flex flex-col gap-6 justify-center items-center w-full h-full text-4xl">
-			<WrenchScrewdriverIcon className="h-24" />
+			<WrenchIcon className="h-24" />
 			<div className=""> Em construção!! </div>
 		</div>
 	)

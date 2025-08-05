@@ -4,28 +4,48 @@ import { Area, AreaChart, CartesianGrid, XAxis } from "recharts"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, } from "@/components/ui/card"
 import { ChartConfig, ChartContainer, ChartLegend, ChartLegendContent, ChartTooltip, ChartTooltipContent, } from "@/components/ui/chart"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue, } from "@/components/ui/select"
-import { ChartDataBarMultiple } from "@/data/mock-charts-user"
+import { GetChartBarMultiple } from "./get-chart-bar-multiple"
 
 export const description = "An interactive area chart"
 
-const chartData = ChartDataBarMultiple
+type ChartDataItem = {
+	date: string;
+	producao: number;
+	desafio: number;
+};
+
 
 const chartConfig = {
 	visitors: {
 		label: "Visitors",
 	},
-	desktop: {
+	producao: {
 		label: "Produção",
 		color: "var(--chart-1)",
 	},
-	mobile: {
+	desafio: {
 		label: "Desafio",
 		color: "var(--chart-2)",
 	},
 } satisfies ChartConfig
 export function ChartAreaInteractive() {
+	const [charData, setChartData] = React.useState<ChartDataItem[]>([]);
+
+	React.useEffect(() => {
+		async function fetchMenu() {
+			const itens = await GetChartBarMultiple("G0055350");
+			setChartData(itens);
+		};
+
+		console.log(charData)
+
+		fetchMenu();
+	}, ["G0055350"])
+
+
+
 	const [timeRange, setTimeRange] = React.useState("90d")
-	const filteredData = chartData.filter((item) => {
+	const filteredData = charData.filter((item) => {
 		const date = new Date(item.date)
 		const referenceDate = new Date("2024-06-30")
 		let daysToSubtract = 90
@@ -137,14 +157,14 @@ export function ChartAreaInteractive() {
 							}
 						/>
 						<Area
-							dataKey="mobile"
+							dataKey="desafio"
 							type="natural"
 							fill="url(#fillMobile)"
 							stroke="var(--color-pink-primary)"
 							stackId="a"
 						/>
 						<Area
-							dataKey="desktop"
+							dataKey="producao"
 							type="natural"
 							fill="url(#fillDesktop)"
 							stroke="var(--color-purple-primary)"

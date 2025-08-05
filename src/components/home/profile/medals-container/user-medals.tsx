@@ -1,9 +1,9 @@
 'use client'
 
 import { Medal } from "@/components/ui/custom/medal";
-import { ChevronDoubleDownIcon } from "@heroicons/react/24/solid";
 import { useEffect, useState } from "react";
 import { getMedals } from "./get-medals";
+import { ChevronDown } from "lucide-react";
 
 type Props = {
 	matricula: string;
@@ -40,7 +40,7 @@ export const UserMedals = ({ matricula }: Props) => {
 					onClick={handleClick}
 					className="w-5 h-5 ml-4 text-muted-foreground"
 				>
-					<ChevronDoubleDownIcon
+					<ChevronDown
 						className={`opacity-50 hover:opacity-100 w-5 h-5 transform transition-transform duration-150 ${collapsed ? "rotate-180" : "rotate-0"
 							}`}
 					/>

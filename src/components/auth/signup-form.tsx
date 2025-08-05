@@ -3,8 +3,8 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { InputCustom } from "@/components/ui/custom/input-custom";
-import { EnvelopeIcon, LockClosedIcon } from "@heroicons/react/24/outline";
 import { ButtonCustom } from "../ui/custom/button-custom";
+import { LockIcon, Mail } from "lucide-react";
 
 export const SignupForm = () => {
 	const router = useRouter();
@@ -27,7 +27,7 @@ export const SignupForm = () => {
 				placeholder="Digite seu e-mail"
 				value={emailField}
 				onChange={(t) => setEmailField(t)}
-				icon={<EnvelopeIcon className="h-6 w-6 text-accent" />}
+				icon={<Mail className="h-6 w-6 text-accent" />}
 			/>
 
 			<InputCustom
@@ -35,7 +35,7 @@ export const SignupForm = () => {
 				value={passwordField}
 				onChange={(t) => setPasswordField(t)}
 				password
-				icon={<LockClosedIcon className="h-6 w-6 text-accent" />}
+				icon={<LockIcon className="h-6 w-6 text-accent" />}
 			/>
 
 			<ButtonCustom

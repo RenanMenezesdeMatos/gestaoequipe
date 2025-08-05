@@ -16,7 +16,7 @@ export const DataMedalUsers: MedalUsers[] = [
 		id: 2,
 		matricula: "G0055350",
 		icon: "BadgeCheck",
-		label: "Acertivo"
+		label: "Assertivo"
 	},
 	{
 		id: 3,
