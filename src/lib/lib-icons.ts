@@ -48,6 +48,7 @@ import {
 	ChartPie,
 	AlarmClock,
 	CircleGauge,
+	CheckCircle,
 } from "lucide-react";
 
 // Mapa de string => componente de ícone
@@ -84,6 +85,7 @@ export const LibIcons: Record<string, LucideIcon> = {
 	Mail,              // "Email"
 	Globe,             // "Site ou Mapa"
 	CheckCircle2,      // "Sucesso"
+	CheckCircle,      // "Sucesso"
 	AlertCircle,       // "Aviso"
 	HelpCircle,        // "Ajuda"
 	PlusCircle,        // "Adicionar"

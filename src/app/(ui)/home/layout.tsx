@@ -1,6 +1,7 @@
-import { HeaderHomeContent } from "@/components/home/profile/header/header-home-content";
+import { HeaderHomeContent } from "@/components/home/layout/header/header-home-content";
+import { UserMedals } from "@/components/home/layout/medals-container/user-medals";
 import { NavHome } from "@/components/home/profile/nav-home";
-import { UserMedals } from "@/components/home/profile/medals-container/user-medals";
+
 
 
 type Props = {
@@ -19,7 +20,9 @@ export default function Layout({ children }: Props) {
 
 			{/* Section de melhadas */}
 
-			<UserMedals />
+			<UserMedals
+				matricula="G0055350"
+			/>
 
 			{/* Conteúdo da página */}
 			<section className="flex flex-col justify-center items-center flex-1 w-[98%] bg-secondary px-2 mb-2 mt-4 h-full rounded-md">
@@ -28,7 +31,7 @@ export default function Layout({ children }: Props) {
 					role="operador"
 				/>
 
-				<div className="flex flex-col items-center justify-center bg-background w-full h-full mb-2 rounded-md">
+				<div className="bg-background w-full h-full mb-2 rounded-md">
 
 					{children}
 

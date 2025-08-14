@@ -7,7 +7,7 @@ type AvatarCustom = {
 
 export const AvatarCustom = ({ alt, src }: AvatarCustom) => {
 	return (
-		<Avatar className="flex items-center justify-center text-[14px] font-semibold w-8 h-8 border-pinkprimarybackground border-2 rounded-full overflow-hidden text-white">
+		<Avatar className="flex items-center justify-center text-[14px] font-semibold w-8 h-8 border-pink-secondary border-2 rounded-full overflow-hidden text-purpleprimarytext bg-accent">
 			<AvatarImage src={src} alt={alt} />
 			<AvatarFallback>
 				{alt.trim()

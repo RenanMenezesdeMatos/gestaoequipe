@@ -1,4 +1,4 @@
-import { NavProfile } from "@/components/home/profile/container-profile-area/profile-area/nav-profile";
+import { NavProfile } from "@/components/home/profile/profile-area/nav-profile";
 
 
 

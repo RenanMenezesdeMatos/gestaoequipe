@@ -1,6 +1,6 @@
 'use client'
 
-import { LinkProfile } from "../../../../ui/custom/linkProfile";
+import { LinkProfile } from "../../../ui/custom/linkProfile";
 import { useEffect, useState } from "react";
 import { GetMenuProfile } from "./get-menu-profile";
 

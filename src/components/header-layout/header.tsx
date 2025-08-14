@@ -1,8 +1,8 @@
-import { users } from "@/data/user"
 import { ThemeTogle } from "./theme-toggle"
 import { ProfileTrigger } from "./profile-area/profile-trigger"
-import { Calendar1, Earth, EarthIcon, EarthLock, Heart, LucideEarth, RefreshCcwIcon } from "lucide-react"
+import { Calendar1, RefreshCcwIcon } from "lucide-react"
 import { NotificationTrigger } from "./notification-area/notifications-trigger"
+
 
 export const HeaderLayout = () => {
 
@@ -23,20 +23,6 @@ export const HeaderLayout = () => {
 			</div>
 
 			<div className="flex flex-row justify-center items-center">
-
-				{/* <div className="flex gap-2 pr-2">
-					Olá <strong>{users[1].name}</strong>
-				</div>
-
-				<ProfilePhoto
-					alt={users[1].name}
-					size={1}
-					src={users[1].photoUrl}
-				/>
-
-				<ChevronDoubleDownIcon
-					className="h-4 cursor-pointer hover:opacity-40"
-				/> */}
 
 				<ProfileTrigger />
 

@@ -1,4 +1,4 @@
-import { FeedbackContent } from "@/components/home/profile/container-profile-area/profile-area/feedback-content";
+import { FeedbackContent } from "@/components/home/profile/profile-area/feedback-content";
 
 
 type Props = {

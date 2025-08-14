@@ -1,5 +1,5 @@
-import { ContainerCarouselCard } from "@/components/home/profile/container-profile-area/resultado-area/carousel-card/container-carousel-card";
-import { ChartContentCard } from "@/components/home/profile/container-profile-area/resultado-area/charts/chart-content-card";
+import { ContainerCarouselCard } from "@/components/home/resultado-area/carousel-card/container-carousel-card";
+import { ChartContentCard } from "@/components/home/resultado-area/charts/chart-content-card";
 
 export default function Page() {
 	return (
