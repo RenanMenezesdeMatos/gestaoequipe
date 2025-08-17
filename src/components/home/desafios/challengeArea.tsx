@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Rocket } from "lucide-react";
 import { LibIcons } from "@/lib/lib-icons";
+import { ChallengeDialog } from "./challenge-dialog";
 
 export const ChallengeArea = () => {
 	const [data, setData] = useState<Indicator[] | null>(null); // começa nulo
@@ -60,19 +61,19 @@ export const ChallengeArea = () => {
 
 			{/* Container Cards*/}
 
-			<div className="h-full w-full flex items-center flex-col gap-2 p-2">
+			<div className="h-full w-full flex items-center flex-col gap-3 p-2">
 				{ordered.map((indicator, idx) => (
 
 					// Card para cada indicador
 					<Card
 						key={idx}
-						className={`w-full flex items-center justify-center p-4 flex-1 rounded-md relative ${indicator.booster ? "border-chart-2 bg-chart-2/15" : " shadow-none bg-muted"}`}
+						className={`w-full flex items-center justify-center p-4 flex-1 rounded-md relative ${indicator.booster ? "border-pink-primary bg-pink-primary/5" : " shadow-none bg-muted"}`}
 					>
 
 						{/* Card com foguete indicando booster no indicador */}
 						{indicator.booster && (
-							<div className="absolute -top-6 right-0 flex items-center gap-0 bg-purpleprimarybackground border border-purple-secondary text-white px-3 py-1 rounded-full text-2xl font-bold">
-								<Rocket className="w-6 h-6 rotate-30 mr-1" />
+							<div className="absolute -top-6 right-0 flex items-center gap-0 bg-purpleprimarybackground border border-pink-primary text-white px-3 py-1 rounded-full text-2xl font-bold">
+								<Rocket className="w-6 h-6 rotate-30 mr-1 text-pink-primary" />
 								{indicator.booster}<span className="text-md font-normal">x</span>
 							</div>
 						)}
@@ -84,14 +85,14 @@ export const ChallengeArea = () => {
 
 								if (col.key === "actions" && indicator.actions) {
 									return (
-										<Button
-											key={ci}
-											className="w-full bg-greenprimarybackground text-white hover:bg-greenprimarybackground"
-											variant="outline"
-											size="lg"
-										>
-											Regulamento
-										</Button>
+
+										<ChallengeDialog
+											title={indicator.name}
+											description={indicator.goalSummary}
+											content={indicator.goalDescription}
+											howToCalculate={indicator.howToCalculate}
+										/>
+
 									);
 								}
 

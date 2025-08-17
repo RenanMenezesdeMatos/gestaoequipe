@@ -3,6 +3,7 @@ export type User = {
 	name: string;
 	description?: string;
 	position?: string;
+	group?: string;
 	email: string;
 	admissionDate: Date;
 	status: 'Férias' | 'Em produção' | 'Atividade Off'

@@ -3,6 +3,7 @@ import { ProfilePhoto } from "@/components/ui/custom/profile-photo";
 import { users } from "@/data/user";
 
 export default function Page() {
+
 	return (
 		<div className="w-full px-12 h-full flex items-center gap-4 justify-between">
 

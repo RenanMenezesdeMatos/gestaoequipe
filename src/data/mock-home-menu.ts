@@ -28,9 +28,9 @@ export const DataHomeMenu: HomeMenuType[] = [
 	},
 	{
 		id: 4,
-		href: "/home/mural",
+		href: "/home/feed",
 		icon: "Rss",
-		label: "Mural",
+		label: "Feed",
 		active: false,
 		role: "operador",
 	},

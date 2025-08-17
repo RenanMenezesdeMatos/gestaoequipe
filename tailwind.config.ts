@@ -11,7 +11,7 @@ const config: Config = {
 		extend: {
 			fontFamily: {
 				roboto: [
-					'Roboto"',
+					'Roboto',
 					'serif'
 				],
 				robotoSlab: [

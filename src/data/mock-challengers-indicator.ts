@@ -23,7 +23,10 @@ export type Indicator = {
 	yourRecord: string;
 	pontos: number;
 	booster?: number; // multiplicador do booster
-	actions?: boolean
+	actions?: boolean;
+	goalSummary: string;
+	goalDescription: string;
+	howToCalculate: string;
 };
 
 export const MockChallengeIndicatos: Indicator[] = [
@@ -36,7 +39,10 @@ export const MockChallengeIndicatos: Indicator[] = [
 		yourRecord: "279",
 		pontos: 100,
 		booster: 5,
-		actions: true
+		actions: true,
+		goalSummary: "Média de tempo de atendimento de clientes via voz.",
+		goalDescription: "O tempo médio de atendimento é a média do tempo gasto para atender um cliente, incluindo o tempo de espera e o tempo de conversa.",
+		howToCalculate: "O TMA é calculado somando o tempo total de atendimento e dividindo pelo número total de atendimentos no mês."
 	},
 	{
 		icon: "CheckCircle",
@@ -46,7 +52,10 @@ export const MockChallengeIndicatos: Indicator[] = [
 		record: "520s",
 		yourRecord: "279",
 		pontos: 100,
-		actions: true
+		actions: true,
+		goalSummary: "Média das notas de monitoria, seja monitoria de qualidade ou de supervisor.",
+		goalDescription: "Média das notas de monitoria, seja monitoria de qualidade ou de supervisor. A monitoria é uma avaliação do atendimento prestado ao cliente, onde são analisados aspectos como qualidade, eficiência e cordialidade e resolutividade.",
+		howToCalculate: "A taxa de monitorias é calculada dividindo o número de monitorias concluídas pelo número total de monitorias programadas."
 	},
 	{
 		icon: "BriefcaseBusiness",
@@ -56,7 +65,10 @@ export const MockChallengeIndicatos: Indicator[] = [
 		record: "520s",
 		yourRecord: "279",
 		pontos: 500,
-		actions: true
+		actions: true,
+		goalSummary: "A aderência é a porcentagem de tempo que o colaborador está ativo no sistema em relação ao tempo programado.",
+		goalDescription: "A aderência é a porcentagem de tempo que o colaborador está ativo no sistema em relação ao tempo programado. Isso inclui o tempo de espera, o tempo de atendimento e o tempo de pausa.",
+		howToCalculate: "A aderência é calculada dividindo o tempo total ativo pelo tempo programado e multiplicando por 100."
 	},
 	{
 		icon: "ChartPie",
@@ -67,6 +79,9 @@ export const MockChallengeIndicatos: Indicator[] = [
 		yourRecord: "279",
 		pontos: 350,
 		actions: true,
-		booster: 2
+		booster: 2,
+		goalSummary: "Produção diária de atendimentos, independentemente do canal.",
+		goalDescription: "A produção é a quantidade de atendimentos realizados pelo colaborador em um dia, independentemente do canal utilizado (voz, chat, e-mail, etc.).",
+		howToCalculate: "A produção é calculada somando o número total de atendimentos realizados pelo colaborador no dia, é realizado uma média por dia útil trabalhado."
 	}
 ]
