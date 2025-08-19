@@ -1,7 +1,7 @@
 "use client"
 
 import { FeedArea } from "@/components/home/feed/feed-area"
-import { TextAreaPostFeedDialog } from "@/components/home/profile/profiletextarea-post-feed/textarea-post-feed"
+import { TextAreaPostFeedDialog } from "@/components/home/profile/post-feed/textarea-post-feed"
 import { Card, CardContent } from "@/components/ui/card"
 import { AvatarCustom } from "@/components/ui/custom/avatar-custom"
 import { users } from "@/data/user"

@@ -3,9 +3,11 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
 import { users } from "@/data/user"
 import { Globe2, Users } from "lucide-react"
-import { SelectPublicationScopeField } from "@/components/home/profile/profiletextarea-post-feed/select-publication-scope-field"
+import { SelectPublicationScopeField } from "@/components/home/profile/post-feed/select-publication-scope-field"
 import { Dispatch, SetStateAction } from "react"
-import { TextareaForm } from "./textarea-form"
+import { FormSchema, TextareaForm } from "./textarea-form"
+import z from "zod"
+import { toast } from "sonner"
 
 type PropsTextAreaPostFeedDialog = {
 	selectedOption: string
@@ -27,6 +29,16 @@ const getScopeIcon = (scope: string) => {
 export const TextAreaPostFeedDialog = ({ selectedOption, setSelectedOption }: PropsTextAreaPostFeedDialog) => {
 	const publishTo = true
 
+	const onSubmit = (data: z.infer<typeof FormSchema>) => {
+		toast("Seu post foi publicado!", {
+			description: (
+				<pre className="mt-2 w-[320px] rounded-md bg-neutral-950 p-4">
+					{JSON.stringify(data, null, 2)}
+				</pre>
+			),
+		})
+	}
+
 	return (
 		<Dialog>
 			<DialogTrigger asChild>
@@ -38,7 +50,7 @@ export const TextAreaPostFeedDialog = ({ selectedOption, setSelectedOption }: Pr
 				</Button>
 			</DialogTrigger>
 
-			<DialogContent className="sm:max-w-[425px] md:max-w-[700px] sm:min-h-[425px] md:min-h-[700px]">
+			<DialogContent className="sm:max-w-[425px] md:max-w-[600px] sm:max-h-[425px] md:min-h-[500px]">
 				<div className="flex flex-col gap-4">
 					<div className="flex items-center gap-4">
 						<AvatarCustom
@@ -69,7 +81,10 @@ export const TextAreaPostFeedDialog = ({ selectedOption, setSelectedOption }: Pr
 					</div>
 
 					<div className="w-full h-full">
-						<TextareaForm />
+						<TextareaForm
+							placeholder="Digite o que está pensando..."
+							setSelectedOption={onSubmit}
+						/>
 					</div>
 				</div>
 			</DialogContent>

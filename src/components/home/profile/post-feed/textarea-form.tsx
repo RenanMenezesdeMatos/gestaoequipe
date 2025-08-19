@@ -9,31 +9,29 @@ import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormField, FormItem, FormMessage, } from "@/components/ui/form"
 import { Textarea } from "@/components/ui/textarea"
 import { ToggleGroupCustomTextArea } from "./toggle-group-custom-textarea"
+import { Dispatch, SetStateAction } from "react"
 
-const FormSchema = z.object({
+type TextAreaProps = {
+	placeholder: string;
+	setSelectedOption: (data: z.infer<typeof FormSchema>) => void;
+}
+
+export const FormSchema = z.object({
 	post: z.string().min(10, { message: "Seu post deve ter no mínimo 10 caractéres.", })
 		.max(600, { message: "Você só tem 600 caracteres :(", })
 })
 
-export function TextareaForm() {
+export const TextareaForm = ({ placeholder, setSelectedOption }: TextAreaProps) => {
 	const form = useForm<z.infer<typeof FormSchema>>({
 		resolver: zodResolver(FormSchema),
 	})
 
-	function onSubmit(data: z.infer<typeof FormSchema>) {
-		toast("Seu post foi publicado!", {
-			description: (
-				<pre className="mt-2 w-[320px] rounded-md bg-neutral-950 p-4">
-					{JSON.stringify(data, null, 2)}
-				</pre>
-			),
-		})
-	}
+
 
 	return (
 		<Form {...form}>
 			<Toaster />
-			<form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-2 text-3xl">
+			<form onSubmit={form.handleSubmit(setSelectedOption)} className="w-full space-y-2 text-3xl">
 				<FormField
 					control={form.control}
 					name="post"
@@ -41,13 +39,13 @@ export function TextareaForm() {
 						<FormItem className="text-3xl">
 							<FormControl className="text-3xl">
 								<Textarea
-									placeholder="O que você está pensando?"
+									placeholder={placeholder}
 									className="
 									resize-none 
 									rounded-none
 									font-roboto
 									w-full 
-									h-[450px]
+									h-full
                                     border-t-transparent
 									border-l-transparent
 									border-r-transparent 
